@@ -32,7 +32,7 @@ def count_empty_lines_between_titles(file_path):
     print(f"Found {len(titles)} sections:")
     for i, (title, count) in enumerate(zip(titles, empty_counts), 1):
         print(f"{i}. {title}")
-        print(f"   → {count - 1} segments before the next chapter title")
+        print(f"   → {count} segments before the next chapter title")
         if i < len(titles):
             print()
     #total_empty = sum(empty_counts)
