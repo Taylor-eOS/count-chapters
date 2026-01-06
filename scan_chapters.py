@@ -10,7 +10,7 @@ def count_empty_lines_between_titles(file_path):
     with open(file_path, 'r', encoding='utf-8') as f:
         for line in f:
             line = line.rstrip('\n')
-            if line.startswith('xxx'):
+            if line.startswith('||'):
                 if current_title is not None:
                     empty_counts.append(empty_line_count)
                 title_text = line[3:].strip()
@@ -26,7 +26,7 @@ def count_empty_lines_between_titles(file_path):
         empty_counts.append(empty_line_count)
     print("Document structure report:")
     if not titles:
-        print("No 'xxx' markers found in the file.")
+        print("No chapter markers found in the file.")
         return
     print(f"Found {len(titles)} sections:")
     for i, (title, count) in enumerate(zip(titles, empty_counts), 1):
