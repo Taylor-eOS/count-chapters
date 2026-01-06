@@ -1,6 +1,7 @@
 import re
+from settings import BOOK_PATH
 
-file_path = "i.txt"
+file_path = BOOK_PATH
 
 def count_empty_lines_between_titles(file_path):
     titles = []
@@ -13,7 +14,7 @@ def count_empty_lines_between_titles(file_path):
             if line.startswith('||'):
                 if current_title is not None:
                     empty_counts.append(empty_line_count)
-                title_text = line[3:].strip()
+                title_text = line[2:].strip()
                 if not title_text:
                     title_text = "(no title)"
                 titles.append(title_text)
