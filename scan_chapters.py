@@ -43,6 +43,6 @@ if __name__ == "__main__":
     try:
         count_empty_lines_between_titles(file_path)
     except FileNotFoundError:
-        print("Error: File 'i.txt' not found in the current directory.")
+        print(f"Error: File {BOOK_PATH} not found in the current directory.")
     except Exception as e:
         print(f"An error occurred: {e}")
